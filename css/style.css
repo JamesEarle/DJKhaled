@@ -8,13 +8,19 @@
   background:white;
   opacity:0.4;
   max-height:69px;
-  margin-top:25%;
+  margin-top:10%;
   margin-bottom:auto;
 }
 
 /*.nav-title > h1 {*/
 /*  margin:1px;*/
 /*}*/
+
+.header-center {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
 
 h1.title {
   text-align:center;
@@ -24,4 +30,18 @@ h1.title {
 
 h2.title {
   text-align:left;
+}
+
+
+.clock {
+  width:100%;
+  margin-top:15%;
+}
+
+.clock > h1 {
+  /*text-align:center;*/
+  /*margin-left:auto;*/
+  /*margin-right:auto;*/
+  font-size:120px;
+  color:white;
 }
