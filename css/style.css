@@ -1,0 +1,27 @@
+.body-background {
+  width:100%;
+  height:100%;
+}
+
+.nav-title {
+  width:100%;
+  background:white;
+  opacity:0.4;
+  max-height:69px;
+  margin-top:25%;
+  margin-bottom:auto;
+}
+
+/*.nav-title > h1 {*/
+/*  margin:1px;*/
+/*}*/
+
+h1.title {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+h2.title {
+  text-align:left;
+}
