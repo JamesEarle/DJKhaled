@@ -1,5 +1,13 @@
 body {
   background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#bg {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height:100vh;
+  overflow: hidden;
 }
 
 .body-background {
@@ -12,7 +20,7 @@ body {
   background:white;
   opacity:0.6;
   max-height:69px;
-  margin-top:10%;
+  margin-top:7.5%;
   margin-bottom:auto;
 }
 
@@ -22,29 +30,30 @@ body {
   margin-right:auto;
 }
 
-h1.title {
-  text-align:center;
+.header-right {
+  text-align:right;
   margin-left:auto;
   margin-right:auto;
 }
 
-h2.title {
-  text-align:left;
+h1.title {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom: 2.5px;
+  font-size: 48px;
 }
 
 .time {
-  max-width:301px;
+  max-width:310px;
 }
 
 .clock {
   width:100%;
-  margin-top:15%;
+  /*margin-top:15%;*/
 }
 
 .clock > h1 {
-  /*text-align:center;*/
-  /*margin-left:auto;*/
-  /*margin-right:auto;*/
   font-size:120px;
   margin-bottom: 0px;
 }
@@ -68,4 +77,14 @@ h2.title {
 
 #minute {
   margin-left: -30px;
+}
+
+#next {
+  margin-top: 15px;
+  margin-right: 25px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.6;
+
 }

@@ -1,10 +1,13 @@
 $(document).ready(function() {
 
 	// Initialize first background.
-  	$('body').css('background-image', "url(img/bg-01.jpg)");
+  	$('#bg').css('background-image', "url(" + bg[Math.floor(Math.random() * bg.length)] + ")");
 
   	// Write the initial time. Every additional write after this is taken care of below.
   	writeTime();
+
+  	// Listeners on objects (excluding 'body' interestingly) must be setup in the .ready() function.
+  	nextButtonListener();
 });
 
 /*
@@ -12,19 +15,25 @@ $(document).ready(function() {
 	In the future, should have enough photos to just be random, similar to quote
 	selection.
 */
-var curr = 1;
-$('body').click(function() {
+function nextButtonListener() {
+	var curr = 1;
+	$('#next').click(function() {
 
-  	$(this).css('background-image', "url(" + bg[curr] + ")");
-  	curr++;
-  
-  	$('#quote').text(quotes[Math.floor(Math.random() * quotes.length)]);
+	  	$('#bg').css('background-image', "url(" + bg[Math.floor(Math.random() * bg.length)] + ")");
 
-  	// Reset counter
-  	if(curr == bg.length) curr = 0;
-  
-});
+	  	// We can use below to fade in and out white when we change background. Not sure if better.
+	  	/*
+	  	$('#bg').animate({opacity: '0'}, 100);
+	  	setTimeout(function() {
+	  		$('#bg').css('background-image', "url(" + bg[curr] + ")");
+	  		$('#quote').text(quotes[Math.floor(Math.random() * quotes.length)]);
+	  	}, 100);
+	  	$('#bg').animate({opacity: '1'}, 100);
+	  	*/
 
+	  	$('#quote').text(quotes[Math.floor(Math.random() * quotes.length)]);
+	});
+}
 /*
 	Every 1 second we play an animation on the colon between hour and minute
 	in the display time. We also use this interval to check that the time is 
@@ -60,7 +69,8 @@ function writeTime() {
   	var hour = dt.getHours();
   	
   	hour = hour > 12 ? hour - 12 : hour;
-
+  	hour = hour == 0 ? 12 : hour;
+  	
   	var minute = dt.getMinutes();
   	minute = minute < 10 ? "0" + minute.toString() : minute;
 
