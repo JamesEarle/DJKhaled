@@ -30,5 +30,7 @@ var quotes = [
 	"Enjoy life, live it up",
 	"They don't want you to smile, so smile",
 	"Mogul talk, win more",
-	"Lion!"
+	"Lion!",
+	"They don't want you to eat right",
+	"The key is to win more"
 ];

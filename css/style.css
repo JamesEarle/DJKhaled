@@ -1,6 +1,19 @@
 body {
   background-size: 100%;
   background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+footer {
+  margin-top: 18%;
+  margin-left: 20px;
+}
+
+.social {
+  max-width: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #bg {
