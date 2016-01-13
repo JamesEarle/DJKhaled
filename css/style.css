@@ -10,17 +10,20 @@ footer {
 }
 
 .social {
-  max-width: 200px;
+  max-width: 210px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 
 #bg {
-  background-size: 100%;
+  background-size: cover;
+  height:100%;
   background-repeat: no-repeat;
   min-height:100vh;
+  min-width:100vh;
   overflow: hidden;
+  z-index:-1;
 }
 
 .body-background {
@@ -28,12 +31,16 @@ footer {
   height:100%;
 }
 
+.content {
+  /*z-index: 1;*/
+}
+
 .nav-title {
   width:100%;
   background:white;
   opacity:0.6;
   max-height:69px;
-  margin-top:7.5%;
+  margin-top:10%;
   margin-bottom:auto;
 }
 
