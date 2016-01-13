@@ -7,14 +7,27 @@
 </head>
 <body>
   <script type='text/javascript' src='js/jquery-2.1.0.min.js'></script>
+  <script type='text/javascript' src='js/backgrounds.js'></script>
+  <script type='text/javascript' src='js/quotes.js'></script>
   <script type='text/javascript' src='js/custom-background.js'></script>
   
-  <div class="clock header-center">
-    <h1>12:34</h1>
+  <div id="clock-time" class="clock header-center">
+    <h1 class="shadow">
+      <div class="time header-center">
+        <span id="hour">12</span>
+        <span id="colon">:</span>
+        <span id="minute">34</span>
+      </div>
+    </h1>
+    <!-- <p class="header-center"> -->
+      <div class="time header-center">
+        <span id="date-formatted" class="shadow date">January 11th, 2016</span>
+      </div>
+    <!-- </p> -->
   </div>
   
   <div class="nav-title">
-    <h1 class="title">Celebrate Success Right, bless up, WATER</h1>
+    <h1 id="quote" class="title">The key is to win more</h1>
   </div>
 </body>
   

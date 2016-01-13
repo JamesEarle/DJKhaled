@@ -1,3 +1,7 @@
+body {
+  background-size: 100%;
+}
+
 .body-background {
   width:100%;
   height:100%;
@@ -6,15 +10,11 @@
 .nav-title {
   width:100%;
   background:white;
-  opacity:0.4;
+  opacity:0.6;
   max-height:69px;
   margin-top:10%;
   margin-bottom:auto;
 }
-
-/*.nav-title > h1 {*/
-/*  margin:1px;*/
-/*}*/
 
 .header-center {
   text-align:center;
@@ -32,6 +32,9 @@ h2.title {
   text-align:left;
 }
 
+.time {
+  max-width:301px;
+}
 
 .clock {
   width:100%;
@@ -43,5 +46,26 @@ h2.title {
   /*margin-left:auto;*/
   /*margin-right:auto;*/
   font-size:120px;
+  margin-bottom: 0px;
+}
+
+.shadow {
   color:white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.date {
+  font-size: 24px;
+}
+
+#hour {
+  margin-right: -30px;
+}
+
+#minute {
+  margin-left: -30px;
 }
