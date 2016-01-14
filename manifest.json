@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "DJ Khaled Tabs",
+  "short_name": "DJK Tabs",
+  "description": "Get inspired by the wise words of DJ Khaled with every new Chrome Tab!",
+  "version": "0.0.1",
+  
+  "content_security_policy": "script-src 'self' https://connect.facebook.net/en_US/sdk.js https://platform.twitter.com/; object-src 'self'",
+  
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "icons" : {
+    "64" : "icon.png",
+    "19" : "icon-19.png"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "https://platform.twitter.com/*",
+    "https://platform.twitter.com/widgets.js",
+    "https://connect.facebook.net/en_US/sdk.js"
+  ],
+  "optional_permissions": [
+    "tabs"
+  ]
+}

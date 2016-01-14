@@ -8,7 +8,21 @@ $(document).ready(function() {
 
   	// Listeners on objects (excluding 'body' interestingly) must be setup in the .ready() function.
   	nextButtonListener();
+    nextButtonHoverAnimate();
 });
+
+/*
+
+*/
+function nextButtonHoverAnimate() {
+  $('#next').hover(
+    function() {
+      $(this).animate({opacity: '1'}, 150);
+    },
+    function() {
+      $(this).animate({opacity: '0.4'}, 150);
+    });
+}
 
 /*
 	Each time the element is selected, we cycle to the next background image.
@@ -36,7 +50,7 @@ function nextButtonListener() {
 }
 /*
 	Every 1 second we play an animation on the colon between hour and minute
-	in the display time. We also use this interval to check that the time is 
+	in the display time. We also use this interval to check that the time is
 	up to date, constantly writing the most recent time.
 */
 var fade = true;
@@ -59,9 +73,9 @@ setInterval(function() {
 }, 1000);
 
 /*
-	This function is responsible for date-time formatting. It will 
+	This function is responsible for date-time formatting. It will
 	select the appropriate elements and set their text to the current
-	time values. It is called once, on page load, and then again every 
+	time values. It is called once, on page load, and then again every
 	second by the above interval.
 */
 function writeTime() {
