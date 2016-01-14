@@ -75,14 +75,17 @@ function nextButtonListener() {
 	up to date, constantly writing the most recent time.
 */
 var fade = true;
+var ctr = 0;
 setInterval(function() {
 	// Write the time every 2 seconds
 	writeTime();
-
-  $('iframe').css('height', '20px');
-  $('iframe').css('width', '100px');
-  $('body.regular.ltr.ready').css('max-width', '150px');
-
+  
+  // Update for the first 3 seconds to be safe, because the buttons take time to load
+  if (ctr <= 3) {
+    updateSocialButtons();
+    ctr++;
+  }
+  
 	// Play fading animation on the colon between digits
 	if(fade) {
 		$('#colon').animate({
@@ -96,6 +99,26 @@ setInterval(function() {
 		fade = true;
 	}
 }, 1000);
+
+/*
+  The social media buttons take time to query their respective websites and
+  load properly, so here we use this update function to update multiple
+  times in the above interval, and after a reasonable amount of time
+  (three seconds should be satisfactory), we can stop.
+*/
+function updateSocialButtons() {
+  $('iframe').css('height', '20px');
+  $('iframe').css('width', '100px');
+  
+  $('body.regular.ltr.ready').css('max-width', '150px');
+  
+  $('#twitter-widget-0').css({
+    'margin-left': '-20px',
+    'height': '30px'
+  }); // Gross
+
+  $('#twitter-widget-1').css('height', '30px');
+}
 
 /*
 	This function is responsible for date-time formatting. It will

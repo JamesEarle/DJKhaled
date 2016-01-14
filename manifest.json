@@ -4,7 +4,7 @@
   "name": "DJ Khaled Tabs",
   "short_name": "DJK Tabs",
   "description": "Get inspired by the wise words of DJ Khaled with every new Chrome Tab!",
-  "version": "0.0.1",
+  "version": "1.0",
   
   "content_security_policy": "script-src 'self' https://connect.facebook.net/ https://platform.twitter.com/; object-src 'self'",
   
