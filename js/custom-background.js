@@ -79,6 +79,10 @@ setInterval(function() {
 	// Write the time every 2 seconds
 	writeTime();
 
+  $('iframe').css('height', '20px');
+  $('iframe').css('width', '100px');
+  $('body.regular.ltr.ready').css('max-width', '150px');
+
 	// Play fading animation on the colon between digits
 	if(fade) {
 		$('#colon').animate({

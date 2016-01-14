@@ -20,8 +20,9 @@
     "https://ajax.googleapis.com/",
     "https://platform.twitter.com/*",
     "https://platform.twitter.com/widgets.js",
-    "https://connect.facebook.net/*"
-    "https://connect.facebook.net/en_US/sdk.js"
+    "https://connect.facebook.net/*",
+    "https://connect.facebook.net/en_US/sdk.js",
+    "https://www.facebook.com/djkhaledtabs/"
   ],
   "optional_permissions": [
     "tabs"
