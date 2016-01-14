@@ -1,5 +1,5 @@
 var bg = [
-	"img/bg-01.jpg", 
+	"img/bg-01.jpg",
 	"img/bg-02.jpg",
 	"img/bg-03.jpg",
 	"img/bg-04.jpg",
@@ -28,4 +28,12 @@ var bg = [
 	"img/bg-28.jpg",
 	"img/bg-29.png",
 	"img/bg-30.png"
+];
+
+var centered = [
+  "img/bg-27.jpg",
+  "img/bg-08.jpg",
+	"img/bg-20.jpg",
+	"img/bg-13.jpg",
+	"img/bg-26.jpg"
 ];

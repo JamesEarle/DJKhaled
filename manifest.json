@@ -6,7 +6,7 @@
   "description": "Get inspired by the wise words of DJ Khaled with every new Chrome Tab!",
   "version": "0.0.1",
   
-  "content_security_policy": "script-src 'self' https://connect.facebook.net/en_US/sdk.js https://platform.twitter.com/; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://connect.facebook.net/ https://platform.twitter.com/; object-src 'self'",
   
   "chrome_url_overrides" : {
     "newtab": "index.html"
@@ -20,6 +20,7 @@
     "https://ajax.googleapis.com/",
     "https://platform.twitter.com/*",
     "https://platform.twitter.com/widgets.js",
+    "https://connect.facebook.net/*"
     "https://connect.facebook.net/en_US/sdk.js"
   ],
   "optional_permissions": [

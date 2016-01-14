@@ -1,3 +1,10 @@
+/*
+  Developed By:
+      James Earle
+      me@jamesearle.ca
+      www.jamesearle.ca
+*/
+
 body {
   background-size: 100%;
   background-repeat: no-repeat;
@@ -5,26 +12,26 @@ body {
 }
 
 footer {
-  margin-top: 18%;
-  margin-left: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 10px;
 }
 
 #bg {
-  background-size: cover;
-  /*background-position:center*/
   height:100%;
+  background-size: cover;
   background-repeat: no-repeat;
   min-height:100vh;
   min-width:100vh;
   overflow: hidden;
-  /*z-index:-1;*/
 }
 
 .social {
-  max-width: 210px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  width:100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-right: 40px;
 }
 
 .body-background {
@@ -53,7 +60,7 @@ footer {
   margin-right:auto;
 }
 
-h1.title {
+.title {
   text-align:center;
   margin-left:auto;
   margin-right:auto;
@@ -67,7 +74,6 @@ h1.title {
 
 .clock {
   width:100%;
-  /*margin-top:15%;*/
 }
 
 .clock > h1 {
@@ -104,4 +110,13 @@ h1.title {
   background-color: white;
   opacity: 0.6;
 
+}
+
+#left {
+  text-align:left;
+}
+
+#right {
+  text-align:right;
+  float:right;
 }

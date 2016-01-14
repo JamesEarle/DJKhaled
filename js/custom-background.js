@@ -1,18 +1,43 @@
+/*
+  Developed By:
+      James Earle
+      me@jamesearle.ca
+      www.jamesearle.ca
+*/
+
 $(document).ready(function() {
+  // Get next background.
+  var next_bg = bg[Math.floor(Math.random() * bg.length)];
+  
+  // Center the background, if we have to.
+  applyPositionStyle(next_bg);
 
 	// Initialize first background.
-  	$('#bg').css('background-image', "url(" + bg[Math.floor(Math.random() * bg.length)] + ")");
+	$('#bg').css('background-image', "url(" + next_bg+ ")");
 
-  	// Write the initial time. Every additional write after this is taken care of below.
-  	writeTime();
+	// Write the initial time. Every additional write after this is taken care of below.
+	writeTime();
 
-  	// Listeners on objects (excluding 'body' interestingly) must be setup in the .ready() function.
-  	nextButtonListener();
-    nextButtonHoverAnimate();
+	// Listeners on objects (excluding 'body' interestingly) must be setup in the .ready() function.
+	nextButtonListener();
+  nextButtonHoverAnimate();
 });
 
 /*
+  Certain images require centering to look normal. If they are listed in the
+  centered array, this styling is applied. Otherwise, a default is given.
+*/
+function applyPositionStyle(next_bg) {
+  if($.inArray(next_bg, centered) > -1) {
+    $('#bg').css('background-position', 'center');
+  } else {
+    $('#bg').css('background-position', 'initial');
+  }
+}
 
+/*
+  Fade the next button in the top right of the screen to white when hovered
+  over.
 */
 function nextButtonHoverAnimate() {
   $('#next').hover(
@@ -32,22 +57,18 @@ function nextButtonHoverAnimate() {
 function nextButtonListener() {
 	var curr = 1;
 	$('#next').click(function() {
-
-	  	$('#bg').css('background-image', "url(" + bg[Math.floor(Math.random() * bg.length)] + ")");
-
-	  	// We can use below to fade in and out white when we change background. Not sure if better.
-	  	/*
-	  	$('#bg').animate({opacity: '0'}, 100);
-	  	setTimeout(function() {
-	  		$('#bg').css('background-image', "url(" + bg[curr] + ")");
-	  		$('#quote').text(quotes[Math.floor(Math.random() * quotes.length)]);
-	  	}, 100);
-	  	$('#bg').animate({opacity: '1'}, 100);
-	  	*/
-
+  
+      // Switch to a random background
+      var next_bg = bg[Math.floor(Math.random() * bg.length)];
+      
+      applyPositionStyle(next_bg);
+	  	$('#bg').css('background-image', "url(" + next_bg + ")");
+      
+      // Switch to a random quote
 	  	$('#quote').text(quotes[Math.floor(Math.random() * quotes.length)]);
 	});
 }
+
 /*
 	Every 1 second we play an animation on the colon between hour and minute
 	in the display time. We also use this interval to check that the time is
