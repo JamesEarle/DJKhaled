@@ -3,6 +3,9 @@
       James Earle
       me@jamesearle.ca
       www.jamesearle.ca
+	  
+	  Riley Davidson
+	  riley.max32@gmail.com
 */
 
 $(document).ready(function() {
@@ -24,7 +27,12 @@ $(document).ready(function() {
 
 	// Listeners on objects (excluding 'body' interestingly) must be setup in the .ready() function.
 	nextButtonListener();
-  nextButtonHoverAnimate();
+	nextButtonHoverAnimate();
+	
+	updateWaterCounter();
+	
+	anotherOneButtonListener();
+	notAnotherOneButtonListener();
 });
 
 /*
@@ -43,7 +51,7 @@ function applyPositionStyle(next_bg) {
   Fade the next button in the top right of the screen to white when hovered
   over.
 */
-function nextButtonHoverAnimate() {
+function nextButtonHoverAnimate() { //convert to allButtonsHoverAnimate? Assign all to same class then loop through each one ad give same properties
   $('#next').hover(
     function() {
       $(this).animate({opacity: '1'}, 150);
@@ -51,6 +59,83 @@ function nextButtonHoverAnimate() {
     function() {
       $(this).animate({opacity: '0.4'}, 150);
     });
+	
+	$('#anotherOne').hover(
+    function() {
+      $(this).animate({opacity: '1'}, 150);
+    },
+    function() {
+      $(this).animate({opacity: '0.4'}, 150);
+    });
+	
+	$('#notAnotherOne').hover(
+    function() {
+      $(this).animate({opacity: '1'}, 150);
+    },
+    function() {
+      $(this).animate({opacity: '0.4'}, 150);
+    });
+	
+	
+}
+
+
+
+/*
+	Each time the user presses the "+" button they add Another One (Another water)
+*/
+function anotherOneButtonListener() {
+	//var number_of_waters;
+	$('#anotherOne').click(function() {
+  
+     addAnotherOne();
+      //number_of_waters++;
+      //chrome.storage.sync.set({"watercount": number_of_waters}, function() { });
+	});
+}
+
+/*
+	Each time the user presses the "-" button they lose a water
+*/
+function notAnotherOneButtonListener() {
+	//var number_of_waters;
+	$('#notAnotherOne').click(function() {
+  
+      $("#bottleCounter").children("img[class=bottle]:last").remove();
+      //number_of_waters--;
+      //chrome.storage.sync.set({"watercount": number_of_waters}, function() { });
+	});
+}
+
+/*
+	Creates another water bottle on the screen
+*/
+function addAnotherOne() {
+      // Add another one
+      var another_water = document.createElement("img");
+	  another_water.src = "http://pngimg.com/upload/bottle_PNG2089.png";
+      another_water.height = 50;
+	  another_water.width = 50;
+	  
+      another_water.setAttribute("class", "bottle");
+      
+	  $("#bottleCounter").append( another_water );
+
+	  var audio = new Audio('sound/and_another_one.wav');
+	  audio.play();
+}
+
+
+
+/*
+	Every time we load the page we need to reload the number of waters they drank today
+*/
+function updateWaterCounter() {
+	
+	//chrome.storage.sync.get(["watercount"], function(items){	
+	//});
+	//for each watercount saved
+		//Call addAnotherOne();
 }
 
 /*
