@@ -32,5 +32,11 @@ var quotes = [
 	"Mogul talk, win more",
 	"Lion!",
 	"They don't want you to eat right",
-	"The key is to win more"
+	"The key is to win more",
+	"Surround yourself with angels, always",
+	"Bless up",
+	"Another one",
+	"Major key",
+	"Be great",
+	"God gave us all this greatness to grow. Grow, but grow great"
 ];

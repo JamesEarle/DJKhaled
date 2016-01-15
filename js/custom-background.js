@@ -7,13 +7,17 @@
 
 $(document).ready(function() {
   // Get next background.
-  var next_bg = bg[Math.floor(Math.random() * bg.length)];
+  var first_bg = bg[Math.floor(Math.random() * bg.length)];
   
   // Center the background, if we have to.
-  applyPositionStyle(next_bg);
+  applyPositionStyle(first_bg);
 
 	// Initialize first background.
-	$('#bg').css('background-image', "url(" + next_bg+ ")");
+	$('#bg').css('background-image', "url(" + first_bg+ ")");
+	
+	// Initialize the first quote
+	var first_quote = quotes[Math.floor(Math.random() * quotes.length)];
+	$('#quote').text(first_quote);
 
 	// Write the initial time. Every additional write after this is taken care of below.
 	writeTime();
@@ -131,7 +135,7 @@ function writeTime() {
   	var hour = dt.getHours();
   	
   	hour = hour > 12 ? hour - 12 : hour;
-  	hour = hour == 0 ? 12 : hour;
+  	hour = hour === 0 ? 12 : hour;
   	
   	var minute = dt.getMinutes();
   	minute = minute < 10 ? "0" + minute.toString() : minute;
