@@ -202,11 +202,11 @@ function updateSocialButtons() {
   $('body.regular.ltr.ready').css('max-width', '150px');
   
   $('#twitter-widget-0').css({
-    'margin-left': '-20px',
+    'margin-left': '0px',
     'height': '30px'
   }); // Gross
 
-  $('#twitter-widget-1').css('height', '30px');
+  // $('#twitter-widget-1').css('height', '30px');
 }
 
 /*
