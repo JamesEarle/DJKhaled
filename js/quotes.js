@@ -38,13 +38,5 @@ var quotes = [
 	"Another one",
 	"Major key",
 	"Be great",
-	"God gave us all this greatness to grow. Grow, but grow great",
-	"We will overcome it",
-	"You will experience road blocks. Overcome it",
-	"Give thanks",
-	"The key is to make it through any situation",
-	"We have to work hard, we have no choice",
-	"Never give up",
-	"Stay away from they",
-	"Never give up. Never surrender"
+	"God gave us all this greatness to grow. Grow, but grow great"
 ];
